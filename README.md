@@ -23,23 +23,17 @@ Quick glance at the analysis & impact:
        ▼         
 [ £2.1M Annual Savings | 27% Faster Emergency Response ]
 
-Key Metrics at a Glance:
+### Key Metrics at a Glance:
 
-🔴 Problem
+|🔴 Problem|🟢 Solution Impact|
 
-🟢 Solution Impact
+| 12% Call Abandonment Rate | 15% Reduction Target (AI Routing) |
 
-12% Call Abandonment Rate
+| £3.42 Cost per Answered Call | £2.90 Achievable (Staff Training)|
 
-15% Reduction Target (AI Routing)
+|8.2 min Avg Call Duration|
 
-£3.42 Cost per Answered Call
-
-£2.90 Achievable (Staff Training)
-
-8.2 min Avg Call Duration
-
-7.0 min Target (β = -17.63 Model)
+|7.0 min Target (β = -17.63 Model)|
 
 (See full workflow visualizations in results/workflow_diagram.png)
 
@@ -80,7 +74,7 @@ df = clean_data(raw_data)
 df['abandonment_rate'] = df['Abandoned'] / df['Offered']
 
 # Feature Engineering
-df['call_cost'] = clinical_time * 45/60 + handler_time * 28/60
+```data['call_cost'] = clinical_time * 45/60 + handler_time * 28/60```
 
 Predictive Modeling
 
