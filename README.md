@@ -45,75 +45,70 @@ Quick glance at the analysis & impact:
 
 **Solution:** 
 <br/>Developed an analytical framework identifying:
-  1. Priority Regions: North West England (22.9% abandonment)
-  2. Cost Levers: 23% clinical time spent on non-urgent calls
-  3. Optimization Model: 18% staffing cost reduction while hitting 95% KPIs
+  1. **Priority Regions:** North West England (22.9% abandonment)
+  2. **Cost Levers:** 23% clinical time spent on non-urgent calls
+  3. **Optimization Model:** 18% staffing cost reduction while hitting 95% KPIs
 
-Business Impact
+## Business Impact
 
-Actionable Outcomes:
+**Actionable Outcomes:**
 
-Dynamic Staffing ToolReduces peak-hour wait times by 31% (6–9PM)ROI: £4.70 saved per £1 invested
+1. **Dynamic Staffing Tool**
+   - Reduces peak-hour wait times by 31% (6–9PM)
+   - **ROI:** £4.70 saved per £1 invested
 
-AI Call Routing PilotTargets high-abandonment postcodes (e.g., LU1, NE3)Impact: 1,200+ hours/month reclaimed for emergencies
+2. **AI Call Routing Pilot**
+   - Targets high-abandonment postcodes (e.g., LU1, NE3)
+   - **Impact:** 1,200+ hours/month reclaimed for emergencies
 
-Real-Time DashboardTracks KPIs: First-Contact Resolution, Cost per Clinical OutcomeSample: results/live_dashboard_preview.ipynb
+3. **Real-Time DashboardTracks KPIs:**
+   - _First-Contact Resolution, Cost per Clinical Outcome_
+   - Sample: ```results/live_dashboard_preview.ipynb```
 
-Technical Approach
+## Technical Approach
 
-Data Pipeline
-
+### 1. Data Pipeline
+```python
 # Clean 534K+ NHS 111 call records
-df = clean_data(raw_data)
-df['abandonment_rate'] = df['Abandoned'] / df['Offered']
+data = clean_data(raw_data)
+data['abandonment_rate'] = data['Abandoned'] / data['Offered']
 
 # Feature Engineering
-```data['call_cost'] = clinical_time * 45/60 + handler_time * 28/60```
+data['call_cost'] = clinical_time * 45/60 + handler_time * 28/60
+```
 
-Predictive Modeling
+### 2. Statistical & Predictive Modeling
 
-ARIMA Forecast: 92% accuracy in 7-day call volume predictions
+- **ARIMA Forecast:** 92% accuracy in 7-day call volume predictions
+- **Regression Insights:** Ambulance Dispatches = -17.63*(Call Duration) + ε (p=0.459, R²=0.001)
 
-Regression Insights: Ambulance Dispatches = -17.63*(Call Duration) + ε (p=0.459, R²=0.001)
+### 3. Cost Optimization
+- MILP Model: Minimize staffing costs while meeting 95% KPI targets
+- Output: Day-parting schedule reducing overtime by 22%
 
-Cost Optimization
+## Strategic Recommendations
+1. **Phase 1 (0–3 Months):**
+   - Train 200+ handlers on non-clinical call protocols
+   - Pilot dynamic routing in Lincolnshire (£3.79 cost/call)
+  
+2. **Phase 2 (4–6 Months):**
+   - Deploy predictive staffing model across 5 high-risk trusts
+   - Negotiate cloud hosting for real-time dashboard
 
-MILP Model: Minimize staffing costs while meeting 95% KPI targets
+3. **Phase 3 (7–12 Months)**:
+   - Expand AI routing nationwide
+   - Partner with NHS Digital for API integration
 
-Output: Day-parting schedule reducing overtime by 22%
+## Future Roadmap
+1. **Patient Risk Scoring:** Prioritize calls by clinical urgency (ML)
+2. **Policy Simulation:** Model Brexit staffing impacts
+3. **Voice Analytics:** NLP to detect unresolved issues in “resolved” calls
 
-Strategic Recommendations
-
-Phase 1 (0–3 Months):
-
-Train 200+ handlers on non-clinical call protocols
-
-Pilot dynamic routing in Lincolnshire (£3.79 cost/call)
-
-Phase 2 (4–6 Months):
-
-Deploy predictive staffing model across 5 high-risk trusts
-
-Negotiate cloud hosting for real-time dashboard
-
-Phase 3 (7–12 Months):
-
-Expand AI routing nationwide
-
-Partner with NHS Digital for API integration
-
-Future Roadmap
-
-Patient Risk Scoring: Prioritize calls by clinical urgency (ML)
-
-Policy Simulation: Model Brexit staffing impacts
-
-Voice Analytics: NLP to detect unresolved issues in “resolved” calls
-
-Reproducibility
-
+## Reproducibility
+```bash
 git clone https://github.com/yourname/nhs-wait-times.git
 pip install -r requirements.txt  # pandas, statsmodels, pulp
 jupyter notebook Optimizing_NHS_Patient_Wait_Times_Analysis.ipynb
+```
 
-Data Source: NHS Open Data Portal (Apr 2015–Mar 2016, CC BY 4.0)
+**Data Source:** [NHS Open Data Portal (Apr 2015–Mar 2016, CC BY 4.0)](https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2015/05/NHS-111-Monthly-Extraction-Apr15-to-Mar16-web-file-revised-11.08.16.csv)
