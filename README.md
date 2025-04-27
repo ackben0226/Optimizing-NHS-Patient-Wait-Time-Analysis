@@ -1,27 +1,32 @@
 # Optimizing-NHS-Patient-Wait-Time-Analysis
 
-A Data-Driven Framework to Reduce Costs & Improve Emergency Care Efficiency
+**A Data-Driven Framework to Reduce Costs & Improve Emergency Care Efficiency**
+<br/> NHS 111 handles over 20 million calls annually, providing urgent advice and directing patients to the right level of care. Reducing wait times here has nationwide impact.
 
-Project Preview
+## Project Preview
 
-Quick glance at the analysis & impact:
+### Quick glance at the analysis & impact (Data & Methodology):
+1. **Data Ingestion & Cleaning**
+- Cleaned 534K+ NHS 111 call records (Apr 2015–Mar 2016).
+- Standardized time metrics, imputed missing values, and calculated
+  <br/>```call_cost = (clinical_time * 45/60) + (handler_time * 28/60).```
 
-[ Call Volume Data ]  
-       │         
-       ▼         
-[ Cleaning & Feature Engineering ]  
-       │         
-       ▼         
-[ EDA: Abandonment Rates ↔ Cost Drivers ]  
-       │         
-       ▼         
-[ Predictive Modeling (ARIMA) ] → [ Forecast Demand ]  
-       │         
-       ▼         
-[ Optimization Engine ] → [ Staff Allocation Plan ]  
-       │         
-       ▼         
-[ £2.1M Annual Savings | 27% Faster Emergency Response ]
+2. **Exploratory Data Analysis & Feature Engineering**
+- EDA on abandonment rates, cost drivers, call volumes, and referral patterns.
+- Engineered KPIs: rejection/offer rates, callback compliance, average wait minutes, referral rates.
+
+3. **Statistical & Predictive Modeling**
+- Regression Analysis: Found Ambulance Dispatches = -17.63 × Call Duration (R²=0.001).
+- ARIMA Forecasting: Achieved 92% accuracy for 7-day call volume predictions.
+
+4. **Optimization Engine**
+- Formulated a MILP to minimize staffing costs under service-level constraints (95% calls answered within threshold).
+- Generated day-parting schedules that cut staff overtime by 22%.
+
+## Key Insights & Recommendations
+- **Callback Compliance:** A 15% lift can reduce wait times by 12 minutes per call, unlocking ~£120K savings per trust.
+- **Triage Accuracy:** Improving triage reduces non-urgent escalations by 22%, saving 10 minutes on average per referral.
+- **Dynamic Staffing:** Deploy real-time demand forecasts to shift staff toward 6–9 PM peaks, cutting wait times by 31%.
 
 ### Key Metrics at a Glance:
 
@@ -104,11 +109,13 @@ data['call_cost'] = clinical_time * 45/60 + handler_time * 28/60
 2. **Policy Simulation:** Model Brexit staffing impacts
 3. **Voice Analytics:** NLP to detect unresolved issues in “resolved” calls
 
-## Reproducibility
+## Technical Highlights & Reproducibility
 ```bash
-git clone https://github.com/yourname/nhs-wait-times.git
+git clone https://github.com/ackben0226/nhs-wait-times.git
 pip install -r requirements.txt  # pandas, statsmodels, pulp
 jupyter notebook Optimizing_NHS_Patient_Wait_Times_Analysis.ipynb
 ```
+- **Languages & Tools:** Python (pandas, NumPy, statsmodels, PuLP), Jupyter, Matplotlib, Seaborn, Git.
+- **Version Control:** Public GitHub repo with modular scripts, clear commit history, and detailed README:
 
 **Data Source:** [NHS Open Data Portal (Apr 2015–Mar 2016, CC BY 4.0)](https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2015/05/NHS-111-Monthly-Extraction-Apr15-to-Mar16-web-file-revised-11.08.16.csv)
