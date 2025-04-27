@@ -26,34 +26,28 @@ Quick glance at the analysis & impact:
 ### Key Metrics at a Glance:
 
 |🔴 Problem|🟢 Solution Impact|
-
+| --- | -----|
 | 12% Call Abandonment Rate | 15% Reduction Target (AI Routing) |
-
 | £3.42 Cost per Answered Call | £2.90 Achievable (Staff Training)|
-
-|8.2 min Avg Call Duration|
-
-|7.0 min Target (β = -17.63 Model)|
+|8.2 min Avg Call Duration|7.0 min Target (β = -17.63 Model)|
 
 (See full workflow visualizations in results/workflow_diagram.png)
 
-Executive Summary
+## Executive Summary
 
-Problem: Chronic NHS 111 wait times drive:
+**Problem:** Chronic NHS 111 wait times drive:
 
-Patient Risks: 12% abandonment = 850+ unresolved emergencies daily
+**Patient Risks:** 12% abandonment = 850+ unresolved emergencies daily
 
-Financial Waste: £4.8M/year inefficiencies in clinical staff allocation
+**Financial Waste:** £4.8M/year inefficiencies in clinical staff allocation
 
-KPI Gaps: 34% of trusts miss 60-second answer targets
+**KPI Gaps:** 34% of trusts miss 60-second answer targets
 
-Solution: Developed an analytical framework identifying:
-
-Priority Regions: North West England (22.9% abandonment)
-
-Cost Levers: 23% clinical time spent on non-urgent calls
-
-Optimization Model: 18% staffing cost reduction while hitting 95% KPIs
+**Solution:** 
+<br/>Developed an analytical framework identifying:
+  1. Priority Regions: North West England (22.9% abandonment)
+  2. Cost Levers: 23% clinical time spent on non-urgent calls
+  3. Optimization Model: 18% staffing cost reduction while hitting 95% KPIs
 
 Business Impact
 
