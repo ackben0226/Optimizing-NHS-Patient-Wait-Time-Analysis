@@ -6,6 +6,12 @@
 ## Project Preview
 
 ### Quick glance at the analysis & impact (Data & Methodology):
+**Summary:**
+- Data cleaning & cost‐metric calculation
+- Exploratory analysis on key KPIs
+- Regression & ARIMA modeling for forecasting
+- MILP optimization for staffing schedules
+  
 1. **Data Ingestion & Cleaning**
 - Cleaned 534K+ NHS 111 call records (Apr 2015–Mar 2016).
 - Standardized time metrics, imputed missing values, and calculated
@@ -41,11 +47,8 @@
 ## Executive Summary
 
 **Problem:** Chronic NHS 111 wait times drive:
-
 **Patient Risks:** 12% abandonment = 850+ unresolved emergencies daily
-
 **Financial Waste:** £4.8M/year inefficiencies in clinical staff allocation
-
 **KPI Gaps:** 34% of trusts miss 60-second answer targets
 
 **Solution:** 
