@@ -71,7 +71,7 @@
 
 3. **Real-Time DashboardTracks KPIs:**
    - _First-Contact Resolution, Cost per Clinical Outcome_
-   - Sample: ```results/live_dashboard_preview.ipynb```
+   - Dashboard: [results/live_dashboard_preview.ipynb](https://nhsplotlydash-dashboard.onrender.com/)
 
 ## Technical Approach
 
