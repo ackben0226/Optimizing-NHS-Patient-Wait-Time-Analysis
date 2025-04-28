@@ -34,6 +34,8 @@
 - **Triage Accuracy:** Improving triage reduces non-urgent escalations by 22%, saving 10 minutes on average per referral.
 - **Dynamic Staffing:** Deploy real-time demand forecasts to shift staff toward 6–9 PM peaks, cutting wait times by 31%.
 
+## [Dashboard](https://nhsplotlydash-dashboard.onrender.com/)
+
 ### Key Metrics at a Glance:
 
 |🔴 Problem|🟢 Solution Impact|
