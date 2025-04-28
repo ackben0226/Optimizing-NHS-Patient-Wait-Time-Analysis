@@ -34,14 +34,15 @@
 - **Triage Accuracy:** Improving triage reduces non-urgent escalations by 22%, saving 10 minutes on average per referral.
 - **Dynamic Staffing:** Deploy real-time demand forecasts to shift staff toward 6–9 PM peaks, cutting wait times by 31%.
 
-## [Dashboard](https://nhsplotlydash-dashboard.onrender.com/)
+## Real-Time KPI Dashboard
+### Click on the [Link](https://nhsplotlydash-dashboard.onrender.com/)
 
 ### Key Metrics at a Glance:
 
 |🔴 Problem|🟢 Solution Impact|
 | --- | -----|
 | 12% Call Abandonment Rate | 15% Reduction Target (AI Routing) |
-| £3.42 Cost per Answered Call | £2.90 Achievable (Staff Training)|
+| £1.08 Cost per Avg Answered Call | £2.90 Achievable (Staff Training)|
 |8.2 min Avg Call Duration|7.0 min Target (β = -17.63 Model)|
 
 (See full workflow visualizations in results/workflow_diagram.png)
