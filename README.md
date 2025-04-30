@@ -103,7 +103,7 @@ data['call_cost'] = clinical_time * 45/60 + handler_time * 28/60
    - Pilot dynamic routing in Lincolnshire (£3.79 cost/call)
   
 2. **Phase 2 (4–6 Months):**
-   - Deploy predictive staffing model across 5 high-risk trusts
+   - Deploy predictive staffing model across 5 high-risk trusts 
    - Negotiate cloud hosting for real-time dashboard
 
 3. **Phase 3 (7–12 Months)**:
