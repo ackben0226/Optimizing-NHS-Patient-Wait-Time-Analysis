@@ -1,6 +1,6 @@
 # Optimizing-NHS-Patient-Wait-Time-Analysis
 
-**A Data-Driven Framework to Reduce Costs & Improve Emergency Care Efficiency**
+### A Data-Driven Framework to Reduce Costs & Improve Emergency Care Efficiency
 <br/> NHS 111 handles over 20 million calls annually, providing urgent advice and directing patients to the right level of care. Reducing wait times here has nationwide impact.
 
 ## Project Preview
